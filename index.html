@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higor Pereira | Portfólio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Higor<span>.Dev</span></a>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#education">Formação</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content hidden">
+            <h2>Olá, eu sou</h2>
+            <h1>Higor <span>Pereira</span></h1>
+            <p>Estudante de Ciência da Computação unindo Desenvolvimento de Software com Inteligência de Dados. Foco em Java, Python e Soluções Inteligentes.</p>
+            <div>
+                <a href="#projects" class="btn">Ver Projetos</a>
+                <a href="Curriculo.pdf" target="_blank" class="btn btn-outline" title="Baixar Currículo">Download CV <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title hidden">Habilidades Técnicas</h2>
+        <div class="skills-container">
+            <div class="skill-card hidden">
+                <i class="fas fa-code"></i>
+                <h3>Backend & Dev</h3>
+                <div class="skill-tags">
+                    <span class="tag">Java (Swing/JavaFX)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">APIs REST</span>
+                    <span class="tag">Git/GitHub</span>
+                </div>
+            </div>
+            <div class="skill-card hidden">
+                <i class="fas fa-database"></i>
+                <h3>Dados & IA</h3>
+                <div class="skill-tags">
+                    <span class="tag">SQL (MySQL)</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">OpenCV (Visão Comp.)</span>
+                </div>
+            </div>
+            <div class="skill-card hidden">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Frontend</h3>
+                <div class="skill-tags">
+                    <span class="tag">HTML5 & CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">Design Responsivo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title hidden">Projetos Recentes</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card hidden">
+                <img src="imagens/comparacao_cerrado_2020_2024.jpg" alt="Print do projeto Ecovision Cerrado" class="project-img">
+                <div class="project-info">
+                    <h3>EcoVision Cerrado <i class="fab fa-python" style="font-size: 1rem;"></i></h3>
+                    <p>IA para detecção de vegetação e desmatamento no bioma Cerrado utilizando imagens de satélite Sentinel-2 e Python.</p>
+                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
+                        <span class="tag">Python</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">Processamento de Imagem</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/HigorPereira10/ecovision-cerrado" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden">
+                <img src="imagens/ClimaRede.png" alt="Print do projeto ClimaRede" class="project-img">
+                <div class="project-info">
+                    <h3>ClimaRede <i class="fab fa-java" style="font-size: 1rem;"></i></h3>
+                    <p>Aplicação desktop robusta para consulta climática em tempo real consumindo APIs REST, focada em performance.</p>
+                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
+                        <span class="tag">Java</span>
+                        <span class="tag">API REST</span>
+                        <span class="tag">Desktop</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/HigorPereira10/ClimaRede" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden">
+                <img src="imagens/GerenciadorDeEstoque.png" alt="Print do projeto Gerenciador De Estoque" class="project-img">
+                <div class="project-info">
+                    <h3>Gerenciador de Estoque <i class="fas fa-database" style="font-size: 1rem;"></i></h3>
+                    <p>Sistema completo de gestão (CRUD) com interface gráfica amigável e integração segura com banco de dados.</p>
+                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Swing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/HigorPereira10/GerenciadorDeProdutos" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title hidden">Trajetória & Objetivos</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item hidden">
+                <span class="timeline-date">Atualmente</span>
+                <div class="timeline-content">
+                    <h3>Objetivo Profissional</h3>
+                    <p>Busco oportunidade de estágio em <strong>Desenvolvimento de Software ou Dados</strong>. Tenho flexibilidade para atuar tanto na criação de sistemas quanto em Business Intelligence, visando aplicar meus conhecimentos técnicos e evoluir profissionalmente.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item hidden">
+                <span class="timeline-date">2023 - Presente</span>
+                <div class="timeline-content">
+                    <h3>Graduando em Ciência da Computação</h3>
+                    <p>Universidade Paulista (UNIP).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item hidden">
+                <span class="timeline-date">2024 - 2025</span>
+                <div class="timeline-content">
+                    <h3>Cursos Complementares</h3>
+                    <p> • Fundamentos de Engenharia de Dados (Data Science Academy)<br>
+                        • Power BI para Business Intelligence (Data Science Academy)<br>
+                        • Excel na Prática (Fundação Bradesco)<br>
+                        • Implementando Banco de Dados (Fundação Bradesco) <br>
+                        • Git e GitHub (Curso em Vídeo)<br>
+                        • Python do Básico ao Avançado (Udemy)<br>
+                        • Desenvolvimento Web Completo (Udemy)<br>
+                        • Java 22 (Udemy)</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title hidden">Vamos Conversar?</h2>
+        <div class="contact-container hidden">
+            <p style="color: var(--text-secondary); max-width: 500px; margin-bottom: 2rem;">
+                Estou disponível para novas oportunidades. Se você procura alguém proativo e apaixonado por tecnologia, entre em contato!
+            </p>
+            <a href="mailto:higor.pereira368@gmail.com" class="btn">Enviar E-mail</a>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/higor-pereira-761081200/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/HigorPereira10" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                <a href="mailto:higor.pereira368@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Higor Pereira © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
