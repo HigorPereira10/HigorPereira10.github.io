@@ -13,7 +13,7 @@
             });
         });
 
-        // Animação de Scroll (Intersection Observer)
+        // Animação de Scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
