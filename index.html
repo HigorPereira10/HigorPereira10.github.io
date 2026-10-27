@@ -3,238 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higor Pereira | Portfólio</title>
-    
+    <title>Higor Pereira | Desenvolvedor Python</title>
+    <meta name="description" content="Desenvolvedor Python focado em automação, integrações e dados. Estagiário na L&A Contabilidade e estudante de Ciência da Computação na UNIP.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://higorpereira10.github.io/">
+    <meta property="og:title" content="Higor Pereira | Desenvolvedor Python">
+    <meta property="og:description" content="Automação, integrações e dados. Projetos, experiência e contato.">
+    <meta property="og:image" content="https://github.com/HigorPereira10.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2310b981'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2309090b'%3Ehp%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Aplica o tema salvo antes da página renderizar, para não piscar -->
+    <script>
+        try {
+            const tema = localStorage.getItem('tema');
+            if (tema) document.documentElement.dataset.theme = tema;
+        } catch (e) {}
+    </script>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">Higor<span>.Dev</span></a>
-        <div class="menu-icon" id="menu-icon">
-            <i class="fas fa-bars"></i>
+    <header class="topo">
+        <div class="topo-inner">
+            <a href="#inicio" class="logo" aria-label="Higor Pereira, voltar ao início"><span class="logo-chave">&lt;</span>higor<span class="logo-cursor">_</span><span class="logo-chave">&gt;</span></a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#stack">Stack</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="topo-acoes">
+                <button class="icone-btn" id="tema-btn" aria-label="Alternar tema claro/escuro">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+                <button class="icone-btn menu-btn" id="menu-btn" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <nav>
-            <ul id="nav-menu">
-                <li><a href="#home" class="active">Início</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#education">Formação</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="progresso" id="progresso"></div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content hidden">
-            <h2>Olá, eu sou</h2>
-            <h1>Higor <span>Pereira</span></h1>
-            <p>Estudante de Ciência da Computação apaixonado por tecnologia e pelo seu poder de transformar negócios. Atuo na interseção entre a inteligência de dados e o desenvolvimento de automações (RPA), focando em extrair valor de informações complexas e criar rotinas eficientes de custo zero.</p>
-            <div>
-                <a href="#projects" class="btn">Ver Projetos</a>
-                <a href="Curriculo.pdf" target="_blank" class="btn btn-outline" title="Baixar Currículo">Download CV <i class="fas fa-download"></i></a>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <section id="skills">
-        <h2 class="section-title hidden">Habilidades Técnicas</h2>
-        <div class="skills-container">
-            <div class="skill-card hidden">
-                <i class="fas fa-code"></i>
-                <h3>Backend & Dev</h3>
-                <div class="skill-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">RPA (Automação)</span>
-                    <span class="tag">Java (Swing/JavaFX)</span>
-                    <span class="tag">APIs REST</span>
-                    <span class="tag">Git/GitHub</span>
-                </div>
-            </div>
-            <div class="skill-card hidden">
-                <i class="fas fa-database"></i>
-                <h3>Dados & IA</h3>
-                <div class="skill-tags">
-                    <span class="tag">SQL (MySQL)</span>
-                    <span class="tag">Power BI</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">OpenCV (Visão Comp.)</span>
-                </div>
-            </div>
-            <div class="skill-card hidden">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Frontend</h3>
-                <div class="skill-tags">
-                    <span class="tag">HTML5 & CSS3</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Bootstrap</span>
-                    <span class="tag">Design Responsivo</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title hidden">Projetos Recentes</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card hidden">
-                <img src="Imagens/automacao_rpa.png" alt="Print do projeto de Automação RPA" class="project-img">
-                <div class="project-info">
-                    <h3>Automação de BPO Financeiro <i class="fas fa-robot" style="font-size: 1rem;"></i></h3>
-                    <p>Robô RPA 100% local desenvolvido em Python para executar de forma autônoma o envio de relatórios financeiros via web. A solução lê diretórios, trata os arquivos e orquestra os envios, eliminando gargalos manuais da operação.</p>
-                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">RPA</span>
-                        <span class="tag">PyAutoGUI</span>
-                        <span class="tag">Pandas</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#experience"><i class="fas fa-briefcase"></i> Projeto Corporativo</a>
-                    </div>
+        <!-- INÍCIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto revelar">
+                <p class="sobretitulo">// Higor Pereira</p>
+                <h1>Desenvolvedor Python<br><span class="destaque">automação, integrações e dados</span></h1>
+                <p class="hero-desc">
+                    Sou estagiário de desenvolvimento na L&amp;A Contabilidade, onde escrevo robôs e integrações
+                    com APIs fiscais, ERPs e WhatsApp que tiram trabalho manual do escritório.
+                    Curso Ciência da Computação na UNIP (conclusão em 2027) e estudo dados e IA.
+                </p>
+                <div class="hero-acoes">
+                    <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+                    <a href="Curriculo.pdf" target="_blank" rel="noopener" class="btn btn-secundario"><i class="fas fa-file-arrow-down"></i> Currículo</a>
+                    <a href="https://github.com/HigorPereira10" target="_blank" rel="noopener" class="icone-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/higor-pereira10" target="_blank" rel="noopener" class="icone-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
-            <div class="project-card hidden">
-                <img src="Imagens/comparacao_cerrado_2020_2024.jpg" alt="Print do projeto SatVision Cerrado" class="project-img">
-                <div class="project-info">
-                    <h3>SatVision Cerrado <i class="fab fa-python" style="font-size: 1rem;"></i></h3>
-                    <p>Sistema de análise ambiental que utiliza IA e Visão Computacional para identificar vegetação e áreas de desmatamento no Cerrado através de imagens Sentinel-2.</p>
-                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">NumPy</span>
+            <div class="terminal-bloco revelar">
+                <div class="terminal">
+                    <div class="terminal-barra">
+                        <span></span><span></span><span></span>
+                        <p>higor@dev: ~</p>
+                        <button class="terminal-repetir" id="terminal-repetir" aria-label="Rodar de novo" title="Rodar de novo"><i class="fas fa-rotate-right"></i></button>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/HigorPereira10/satvision-cerrado" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    <div class="terminal-abas" role="tablist" aria-label="Escolha o que rodar">
+                        <button class="ativa" data-rotina="escritorio" role="tab"><span class="aba-extra">automações do </span>escritório</button>
+                        <button data-rotina="projetos" role="tab"><span class="aba-extra">projetos </span>pessoais</button>
                     </div>
+                    <pre class="terminal-corpo" id="terminal" aria-live="off"><code></code></pre>
+                </div>
+                <p class="terminal-legenda">Uma demonstração dos meus projetos. Clique nas abas.</p>
+            </div>
+        </section>
+
+        <!-- NÚMEROS -->
+        <section class="numeros revelar" aria-label="Resumo">
+            <div><strong data-contar="20">20</strong><span>sistemas e automações internas na L&amp;A</span></div>
+            <div><strong data-contar="6">6</strong><span>releases do UnePDF, projeto open source</span></div>
+            <div><strong data-contar="5">5</strong><span>linguagens em projetos: Python, Java, C#, JS e SQL</span></div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos">
+            <div class="secao-cabecalho secao-cabecalho-linha revelar">
+                <div>
+                    <p class="secao-rotulo">01 · projetos</p>
+                    <h2>O que eu construí</h2>
+                </div>
+                <div class="filtros" role="group" aria-label="Filtrar projetos">
+                    <button class="ativo" data-filtro="todos">Todos</button>
+                    <button data-filtro="automacao">Automação</button>
+                    <button data-filtro="dados">Dados e IA</button>
+                    <button data-filtro="desktop">Desktop</button>
                 </div>
             </div>
 
-            <div class="project-card hidden">
-                <img src="Imagens/ClimaRede.png" alt="Print do projeto ClimaRede" class="project-img">
-                <div class="project-info">
-                    <h3>ClimaRede <i class="fab fa-java" style="font-size: 1rem;"></i></h3>
-                    <p>Aplicação desktop desenvolvida em Java para consulta climática em tempo real via APIs REST, com interface intuitiva e recursos adicionais de comunicação entre usuários.</p>
-                    <div class="skill-tags" style="justify-content: flex-start; margin-bottom: 1rem;">
-                        <span class="tag">Java</span>
-                        <span class="tag">API REST</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Swing</span>
+            <article class="projeto projeto-destaque revelar" data-categorias="automacao desktop">
+                <button class="projeto-img" data-titulo="UnePDF" data-galeria='[["Imagens/unepdf.png","Tela inicial"],["Imagens/unepdf-unir.gif","Unindo PDFs"],["Imagens/unepdf-organizar.png","Organizar páginas"],["Imagens/unepdf-xml-para-pdf.png","XML de NF-e para DANFE"],["Imagens/unepdf-assinar.png","Assinatura com certificado A1"]]'>
+                    <img src="Imagens/unepdf.png" alt="Tela inicial do UnePDF" loading="lazy">
+                    <span class="ver-telas"><i class="fas fa-images"></i> ver 5 telas</span>
+                </button>
+                <div class="projeto-info">
+                    <div class="selos">
+                        <span class="selo selo-verde">open source · MIT</span>
+                        <span class="selo">6 releases</span>
+                        <span class="selo">CI + testes</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/HigorPereira10/ClimaRede" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    <h3>UnePDF</h3>
+                    <p>
+                        Suíte de ferramentas PDF para Windows que funciona 100% offline: unir e dividir arquivos,
+                        organizar páginas, converter XML de NF-e em DANFE, OCR, assinar com certificado A1 e conferir assinaturas.
+                        Nasceu como ferramenta interna do escritório e virou um projeto aberto, com instalador.
+                    </p>
+                    <ul class="tags">
+                        <li>Python</li><li>PySide6</li><li>pypdf</li><li>pyHanko</li><li>pytest</li><li>GitHub Actions</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a href="https://github.com/HigorPereira10/UnePDF" target="_blank" rel="noopener"><i class="fab fa-github"></i> Código</a>
+                        <a href="https://github.com/HigorPereira10/UnePDF/releases/latest" target="_blank" rel="noopener"><i class="fas fa-download"></i> Baixar</a>
                     </div>
                 </div>
+            </article>
+
+            <div class="projetos-grade">
+                <article class="projeto revelar" data-categorias="automacao dados">
+                    <button class="projeto-img" data-titulo="Clareza Contábil" data-galeria='[["Imagens/clareza-fluxo-caixa.png","Fluxo de caixa projetado"],["Imagens/clareza-saldos.png","Saldos e evolução"],["Imagens/clareza-contabil.png","Dashboard"]]'>
+                        <img src="Imagens/clareza-fluxo-caixa.png" alt="Gráfico de fluxo de caixa projetado no Clareza Contábil" loading="lazy">
+                        <span class="ver-telas"><i class="fas fa-images"></i> ver 3 telas</span>
+                    </button>
+                    <div class="projeto-info">
+                        <h3>Clareza Contábil</h3>
+                        <p>
+                            App para escritórios de contabilidade que junta contas a receber e a pagar de vários ERPs
+                            (Conta Azul, Omie, Bling, Nibo, Asaas ou CSV), projeta o fluxo de caixa e gera relatório em Excel.
+                            Multi-empresa, com conectores plugáveis e testes das regras de negócio.
+                        </p>
+                        <ul class="tags"><li>Python</li><li>Streamlit</li><li>Pandas</li><li>Altair</li><li>pytest</li></ul>
+                        <div class="projeto-links">
+                            <a href="https://github.com/HigorPereira10/Clareza_Contabil" target="_blank" rel="noopener"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-categorias="automacao">
+                    <button class="projeto-img" data-titulo="Regime Tributário em Lote" data-galeria='[["Imagens/regime-upload.png","Envio da planilha"],["Imagens/regime-digitar.png","Digitação manual de CNPJs"],["Imagens/regime-tributario.png","Resultado da consulta"]]'>
+                        <img src="Imagens/regime-upload.png" alt="Tela inicial do Regime Tributário em Lote" loading="lazy">
+                        <span class="ver-telas"><i class="fas fa-images"></i> ver 3 telas</span>
+                    </button>
+                    <div class="projeto-info">
+                        <h3>Regime Tributário em Lote</h3>
+                        <p>
+                            Consulta o regime tributário (Simples Nacional, MEI ou Regime Normal) de uma lista de CNPJs
+                            a partir de uma planilha, usando a BrasilAPI. Roda na web ou como executável para Windows.
+                        </p>
+                        <ul class="tags"><li>Python</li><li>Streamlit</li><li>httpx</li><li>Pandas</li><li>PyInstaller</li></ul>
+                        <div class="projeto-links">
+                            <a href="https://github.com/HigorPereira10/Regime_Tributario" target="_blank" rel="noopener"><i class="fab fa-github"></i> Código</a>
+                            <a href="https://regimetributario.streamlit.app/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Testar online</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-categorias="dados">
+                    <button class="projeto-img" data-titulo="SatVision Cerrado" data-galeria='[["Imagens/comparacao_cerrado_2020_2024.jpg","Comparação entre 2020 e 2024"],["Imagens/deteccao_vegetacao_cerrado.jpg","Detecção de vegetação"]]'>
+                        <img src="Imagens/comparacao_cerrado_2020_2024.jpg" alt="Comparação da vegetação do Cerrado entre 2020 e 2024" loading="lazy">
+                        <span class="ver-telas"><i class="fas fa-images"></i> ver 2 telas</span>
+                    </button>
+                    <div class="projeto-info">
+                        <h3>SatVision Cerrado</h3>
+                        <p>
+                            Detecção de vegetação e desmatamento no Cerrado com imagens do satélite Sentinel-2:
+                            modelo ResNet18 treinado no EuroSAT, comparação entre 2020 e 2024 e dashboard interativo.
+                        </p>
+                        <ul class="tags"><li>Python</li><li>PyTorch</li><li>OpenCV</li><li>Streamlit</li></ul>
+                        <div class="projeto-links">
+                            <a href="https://github.com/HigorPereira10/SatVision-Cerrado" target="_blank" rel="noopener"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-categorias="desktop">
+                    <button class="projeto-img" data-titulo="Gerenciador de Estoque" data-galeria='[["Imagens/gerenciador-estoque.png","Tela principal"]]'>
+                        <img src="Imagens/gerenciador-estoque.png" alt="Tela do Gerenciador de Estoque" loading="lazy">
+                        <span class="ver-telas"><i class="fas fa-expand"></i> ampliar</span>
+                    </button>
+                    <div class="projeto-info">
+                        <h3>Gerenciador de Estoque</h3>
+                        <p>
+                            Aplicação desktop de controle de estoque em Java 21 e JavaFX, com painel de indicadores, busca, modo escuro, persistência em SQLite,
+                            arquitetura em camadas (model, repository, service, ui) e testes com JUnit.
+                        </p>
+                        <ul class="tags"><li>Java 21</li><li>JavaFX</li><li>SQLite</li><li>Maven</li><li>JUnit</li></ul>
+                        <div class="projeto-links">
+                            <a href="https://github.com/HigorPereira10/GerenciadorDeEstoque" target="_blank" rel="noopener"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title hidden">Experiência Profissional</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item hidden">
-                <span class="timeline-date">Próximo Passo</span>
-                <div class="timeline-content">
-                    <h3>Objetivo Profissional</h3>
-                    <p>Atuar nas áreas de <strong>Desenvolvimento</strong> ou <strong>Análise de Dados</strong>, utilizando Python, SQL e Inteligência Artificial para eliminar processos manuais, extrair valor das informações e desenvolver rotinas tecnológicas focadas na otimização de resultados.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item hidden">
-                <span class="timeline-date">Mai 2026 - Atual</span>
-                <div class="timeline-content">
-                    <h3>Estagiário de Desenvolvimento (Foco em Automação e IA)</h3>
-                    <p><strong>L&A Contábil</strong><br>
-                    Atuação estratégica na transformação digital do setor financeiro por meio de código. Responsável por arquitetar e desenvolver soluções de automação (RPA) em Python, realizar o tratamento de bases de dados complexas e auxiliar na integração de modelos de Inteligência Artificial.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item hidden">
-                <span class="timeline-date">Mai 2023 - Mai 2026</span>
-                <div class="timeline-content">
-                    <h3>Suporte Técnico Nível 1</h3>
-                    <p><strong>Universidade Paulista (UNIP)</strong><br>
-                    Suporte técnico a docentes e laboratórios acadêmicos. Atuação focada no diagnóstico ágil de incidentes (hardware, redes e periféricos) para garantir a continuidade das aulas. Execução de manutenções preventivas e preparação de ambientes, assegurando a alta disponibilidade dos recursos tecnológicos.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item hidden">
-                <span class="timeline-date">Ago 2019 - Nov 2020</span>
-                <div class="timeline-content">
-                    <h3>Jovem Aprendiz Administrativo</h3>
-                    <p><strong>Banco Bradesco S.A.</strong><br>
-                    Vivência em rotinas corporativas de grande porte, atuando com suporte ao fluxo de informações, organização do setor e desenvolvendo soft skills essenciais para trabalho em equipe e atendimento ao cliente.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="education">
-        <h2 class="section-title hidden">Formação Acadêmica</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item hidden">
-                <span class="timeline-date">2023 - 2027 (Previsão)</span>
-                <div class="timeline-content">
-                    <h3>Graduando em Ciência da Computação</h3>
-                    <p>Universidade Paulista (UNIP). Foco em algoritmos e estrutura de dados.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item hidden">
-                <span class="timeline-date">2024 - 2025</span>
-                <div class="timeline-content">
-                    <h3>Certificações e Cursos</h3>
-                    <p style="line-height: 1.8;">
-                        <strong style="color: var(--accent-color)">Desenvolvimento & Programação:</strong><br>
-                        • Java 22 (Udemy)<br>
-                        • Python – Básico ao Avançado (Udemy)<br>
-                        • Desenvolvimento Web Completo (Udemy)<br>
-                        • Git e GitHub (Curso em Vídeo)<br>
-                        <br>
-                        <strong style="color: var(--accent-color)">Dados & BI:</strong><br>
-                        • Microsoft Power BI Para Business Intelligence e Data Science (DSA)<br>
-                        • Fundamentos de Engenharia de Dados (DSA)<br>
-                        • Power BI para Business Intelligence (DSA)<br>
-                        • Excel na Prática (Fundação Bradesco)<br>
-                        <br>
-                        <strong style="color: var(--accent-color)">Banco de Dados:</strong><br>
-                        • Implementando Banco de Dados (Fundação Bradesco)
+            <article class="projeto projeto-tcc revelar" data-categorias="dados">
+                <div class="projeto-info">
+                    <div class="selos"><span class="selo selo-ambar">TCC em andamento · código em breve</span></div>
+                    <h3>Ecovision</h3>
+                    <p>
+                        Meu TCC, desenvolvido em equipe: um sistema de IoT e visão computacional para detectar cedo
+                        pragas e anomalias em estufas de tomate. A cada duas horas, um Raspberry Pi fotografa as folhas
+                        e lê os sensores do ambiente. Uma API na nuvem roda o modelo de IA e o produtor acompanha
+                        tudo e recebe alertas por um app no celular.
                     </p>
                 </div>
-            </div>
+                <ol class="fluxo" aria-label="Arquitetura do Ecovision">
+                    <li><i class="fas fa-camera"></i><span>Raspberry Pi + câmera</span><small>fotos e sensores</small></li>
+                    <li><i class="fas fa-brain"></i><span>API no Railway</span><small>FastAPI · TFLite</small></li>
+                    <li><i class="fas fa-database"></i><span>Supabase</span><small>Postgres + Storage</small></li>
+                    <li><i class="fas fa-mobile-screen"></i><span>App</span><small>Expo · React Native</small></li>
+                </ol>
+                <dl class="camadas">
+                    <div>
+                        <dt><i class="fas fa-microchip"></i> Borda</dt>
+                        <dd>Raspberry Pi Zero 2 W, Camera Module 3 com autofoco, sensores DHT22 e de umidade do solo, fila offline para quando a rede cai.</dd>
+                    </div>
+                    <div>
+                        <dt><i class="fas fa-brain"></i> IA</dt>
+                        <dd>Modelo treinado com TensorFlow/Keras no Google Colab e convertido para TensorFlow Lite.</dd>
+                    </div>
+                    <div>
+                        <dt><i class="fas fa-cloud"></i> Nuvem</dt>
+                        <dd>API em FastAPI no Railway, inferência em memória e deploy automático com GitHub Actions.</dd>
+                    </div>
+                    <div>
+                        <dt><i class="fas fa-database"></i> Dados</dt>
+                        <dd>Supabase: Postgres para leituras e diagnósticos, Storage para as imagens.</dd>
+                    </div>
+                    <div>
+                        <dt><i class="fas fa-mobile-screen"></i> App</dt>
+                        <dd>Expo e React Native, login com JWT e notificações para o produtor.</dd>
+                    </div>
+                </dl>
+            </article>
 
-        </div>
-    </section>
+            <p class="sem-resultado" id="sem-resultado" hidden>Nenhum projeto nessa categoria.</p>
 
-    <section id="contact">
-        <h2 class="section-title hidden">Vamos Conversar?</h2>
-        <div class="contact-container hidden">
-            <p style="color: var(--text-secondary); max-width: 500px; margin-bottom: 2rem;">
-                Estou disponível para novas oportunidades. Caso esteja em busca de alguém comprometido, organizado e com forte interesse em tecnologia e inovação, entre em contato.
+            <p class="mais-projetos revelar">
+                <a href="https://github.com/HigorPereira10?tab=repositories" target="_blank" rel="noopener">Ver todos os repositórios no GitHub <i class="fas fa-arrow-right"></i></a>
             </p>
-            <a href="mailto:higor.pereira368@gmail.com" class="btn">Enviar E-mail</a>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/higor-pereira-761081200/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/HigorPereira10" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
-                <a href="mailto:higor.pereira368@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+        </section>
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia">
+            <div class="secao-cabecalho revelar">
+                <p class="secao-rotulo">02 · experiência</p>
+                <h2>Onde trabalhei</h2>
             </div>
-        </div>
-    </section>
+
+            <div class="linha-tempo">
+                <article class="item revelar">
+                    <p class="item-data">mai 2026 – atual</p>
+                    <h3>Estagiário de Desenvolvimento · Automação e IA</h3>
+                    <p class="item-local">L&amp;A Contabilidade</p>
+                    <p>Desenvolvo as automações e os sistemas internos do escritório. Alguns exemplos:</p>
+                    <ul class="lista">
+                        <li>Monitor de certificados digitais em C# que acompanha a validade dos certificados dos clientes e envia a proposta de renovação pelo WhatsApp, via API do Zappy.</li>
+                        <li>Robôs para obrigações e consultas fiscais: envio de DCTFWeb em lote pela Acessórias, consulta de restituições do IRPF e análise de retenções em NFS-e da Prefeitura de São Paulo.</li>
+                        <li>Integrações financeiras: download de notas fiscais de clientes do Mercado Livre pela API oficial, leitura de boletos em PDF para atualizar as cobranças do BPO e conciliação de bases financeiras.</li>
+                        <li>Portal em Google Apps Script para clientes enviarem documentos e receptor de webhooks que registra as pesquisas de satisfação em planilha com dashboard.</li>
+                        <li>O UnePDF começou aqui, como ferramenta interna, e hoje é open source.</li>
+                    </ul>
+                    <p class="item-nota">O código fica em repositórios privados porque lida com dados de clientes.</p>
+                    <ul class="tags"><li>Python</li><li>C#</li><li>Google Apps Script</li><li>JavaScript</li><li>APIs REST</li><li>Webhooks</li></ul>
+                </article>
+
+                <article class="item item-secundario revelar">
+                    <p class="item-data">mai 2023 – mai 2026</p>
+                    <h3>Suporte Técnico Nível 1</h3>
+                    <p class="item-local">Universidade Paulista (UNIP)</p>
+                    <ul class="lista">
+                        <li>Atendimento a professores durante as aulas e resolução dos chamados dos laboratórios.</li>
+                        <li>Diagnóstico de problemas de hardware, rede e periféricos.</li>
+                        <li>Manutenção preventiva e preparação das salas antes das aulas.</li>
+                    </ul>
+                </article>
+
+                <article class="item item-secundario revelar">
+                    <p class="item-data">ago 2019 – nov 2020</p>
+                    <h3>Jovem Aprendiz Administrativo</h3>
+                    <p class="item-local">Banco Bradesco S.A.</p>
+                    <ul class="lista">
+                        <li>Apoio ao setor responsável por eventos e campanhas de incentivo.</li>
+                        <li>Produção de planilhas, apresentações e documentos com o pacote Office.</li>
+                        <li>Criação e ajuste de peças gráficas no Photoshop.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack">
+            <div class="secao-cabecalho revelar">
+                <p class="secao-rotulo">03 · stack</p>
+                <h2>Com o que eu trabalho</h2>
+            </div>
+
+            <div class="stack-grade">
+                <div class="stack-bloco revelar">
+                    <h3><i class="fas fa-code"></i> Linguagens</h3>
+                    <ul class="tags"><li>Python</li><li>Java</li><li>C#</li><li>SQL</li><li>JavaScript</li><li>HTML e CSS</li></ul>
+                </div>
+                <div class="stack-bloco revelar">
+                    <h3><i class="fas fa-gears"></i> Automação e integração</h3>
+                    <ul class="tags"><li>APIs REST</li><li>Webhooks</li><li>Google Apps Script</li><li>httpx / requests</li><li>PyInstaller</li></ul>
+                </div>
+                <div class="stack-bloco revelar">
+                    <h3><i class="fas fa-chart-line"></i> Dados e IA</h3>
+                    <ul class="tags"><li>Pandas</li><li>Streamlit</li><li>PyTorch</li><li>OpenCV</li><li>SQLite</li><li>MySQL</li><li>Power BI</li></ul>
+                </div>
+                <div class="stack-bloco revelar">
+                    <h3><i class="fas fa-screwdriver-wrench"></i> Qualidade e ferramentas</h3>
+                    <ul class="tags"><li>Git</li><li>GitHub Actions</li><li>pytest</li><li>JUnit</li><li>Maven</li></ul>
+                </div>
+            </div>
+
+            <div class="estudando revelar">
+                <div class="estudando-cabecalho">
+                    <span class="estudando-rotulo"><i class="fas fa-book-open"></i> estudando agora</span>
+                    <p>O caminho que estou seguindo para levar dados e IA até a produção.</p>
+                </div>
+                <div class="estudando-grade">
+                    <div>
+                        <h4><i class="fas fa-brain"></i> IA e ciência de dados</h4>
+                        <ul class="tags"><li>Machine learning</li><li>Estatística aplicada</li><li>Análise exploratória</li><li>LLMs e APIs de IA</li></ul>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-diagram-project"></i> Engenharia de dados</h4>
+                        <ul class="tags"><li>Pipelines ETL/ELT</li><li>Modelagem de dados</li><li>Orquestração</li><li>SQL avançado</li></ul>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-cloud"></i> Nuvem e produção</h4>
+                        <ul class="tags"><li>Amazon S3</li><li>Data lakes</li><li>Serviços da AWS</li><li>Docker</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao">
+            <div class="secao-cabecalho revelar">
+                <p class="secao-rotulo">04 · formação</p>
+                <h2>Formação e cursos</h2>
+            </div>
+
+            <div class="formacao-grade">
+                <article class="cartao revelar">
+                    <p class="item-data">2023 – 2027 (previsão)</p>
+                    <h3>Bacharelado em Ciência da Computação</h3>
+                    <p class="item-local">Universidade Paulista (UNIP)</p>
+                </article>
+
+                <article class="cartao revelar">
+                    <p class="item-data">2024 – 2025</p>
+                    <h3>Cursos</h3>
+                    <div class="cursos">
+                        <div>
+                            <h4>Programação</h4>
+                            <ul>
+                                <li>Java 22 <span>Udemy</span></li>
+                                <li>Python do básico ao avançado <span>Udemy</span></li>
+                                <li>Desenvolvimento Web Completo <span>Udemy</span></li>
+                                <li>Git e GitHub <span>Curso em Vídeo</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Dados e BI</h4>
+                            <ul>
+                                <li>Microsoft Power BI para Business Intelligence e Data Science <span>DSA</span></li>
+                                <li>Fundamentos de Engenharia de Dados <span>DSA</span></li>
+                                <li>Power BI para Business Intelligence <span>DSA</span></li>
+                                <li>Excel na Prática <span>Fundação Bradesco</span></li>
+                                <li>Implementando Banco de Dados <span>Fundação Bradesco</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="contato revelar">
+            <p class="secao-rotulo">05 · contato</p>
+            <h2>Vamos conversar?</h2>
+            <p>Respondo por e-mail ou pelo LinkedIn.</p>
+            <div class="contato-acoes">
+                <a href="mailto:higor.pereira368@gmail.com" class="icone-btn" aria-label="Enviar e-mail" title="Enviar e-mail"><i class="fas fa-envelope"></i></a>
+                <button class="icone-btn" id="copiar-email" data-email="higor.pereira368@gmail.com" aria-label="Copiar e-mail" title="Copiar e-mail"><i class="far fa-copy"></i></button>
+                <a href="https://www.linkedin.com/in/higor-pereira10" target="_blank" rel="noopener" class="icone-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/HigorPereira10" target="_blank" rel="noopener" class="icone-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>Desenvolvido por Higor Pereira © 2026</p>
+        <p>© 2026 Higor Pereira · São Paulo, Brasil · <a href="https://github.com/HigorPereira10/HigorPereira10.github.io" target="_blank" rel="noopener">código deste site</a></p>
     </footer>
+
+    <!-- Galeria de telas dos projetos -->
+    <dialog class="galeria" id="galeria" aria-label="Telas do projeto">
+        <div class="galeria-topo">
+            <p><strong id="galeria-titulo"></strong> <span id="galeria-legenda"></span></p>
+            <span class="galeria-contador" id="galeria-contador"></span>
+            <button class="icone-btn" id="galeria-fechar" aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="galeria-corpo">
+            <button class="icone-btn galeria-nav" id="galeria-anterior" aria-label="Tela anterior"><i class="fas fa-chevron-left"></i></button>
+            <img id="galeria-img" alt="">
+            <button class="icone-btn galeria-nav" id="galeria-proxima" aria-label="Próxima tela"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </dialog>
+
+    <div class="aviso" id="aviso" role="status"></div>
 
     <script src="script.js"></script>
 </body>
